@@ -135,36 +135,36 @@ aside{
 }
 
 /* --------------------------------------------general section ------------------------------------- */
-#top-stats{
+#topstats{
     margin-bottom: 20px;
+    grid-area: topstats;
 }
-#top-stats .container .stats{
-    display: grid;
-    grid-template-columns: repeat(1 , 1fr);
-    grid-template-rows: repeat(3 , 1fr);
+#topstats .container .stats{
+    display: flex;
+    flex-direction: column;
     gap: 20px;
 }
-#top-stats .container .card {
+#topstats .container .card {
     display: flex;
     flex-direction: column;
     gap: 10px;
     
 }
-#top-stats .container .stats .card p{
+#topstats .container .stats .card p{
     font-weight: 600;
     font-size: 12px;
     color: #6A7282;
 }
-#top-stats .container .stats .card h2{
+#topstats .container .stats .card h2{
     font-weight: 700;
     font-size: 30px;
 }
-#top-stats .container .stats .card .text{
+#topstats .container .stats .card .text{
     font-weight: 600;
     font-size: 14px;
     color: #00a63e;
 }
-#top-stats .container .stats .expense .text{
+#topstats .container .stats .expense .text{
     color: red;
 }
 /* ----------------------------------------start fullPage ------------------------------------------ */
@@ -268,6 +268,7 @@ aside{
 /* -------------------------------------------------end activities --------------------------------------- */
 #history{
     grid-area: history;
+    max-height: 400px;
 }
 .card .head-txt{
     display: flex;
@@ -285,13 +286,14 @@ aside{
 }
 #history .table-wrapper{
     overflow-x: auto;
+    max-height: fit-content;
 }
 #history .card table{
     font-size: 16px;
     font-weight: 600;
-    display: block;
     overflow-x: auto;
-    width: max-content;
+    width: 100%;
+    border-collapse: collapse;
 }
 #history .card table thead tr{
     border-bottom: 4px solid #F9FAFB;

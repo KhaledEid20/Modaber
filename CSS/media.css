@@ -54,11 +54,10 @@
         float: right;
         order: 2;
     }
-    #topstats{
-        grid-area: topstats;
-    }
+
     #topstats .container .stats{
         display: flex;
+        flex-direction: row;
         gap: 15px;
     }
     #topstats .container .stats .card{
@@ -67,6 +66,8 @@
 
     .fullPage{
         display: grid;
+        overflow: hidden;
+        gap: 0;
         grid-template-columns: repeat(3 , minmax(0,1fr));
         grid-template-rows: repeat(5 , auto);
         grid-template-areas: 
@@ -77,4 +78,11 @@
             "general summary payment-cards"
         ;
     }
+    #history{
+        grid-area: history;
+    }
+    #topstats{
+    grid-area: topstats;
+    }
 }
+
