@@ -168,11 +168,18 @@ aside{
 }
 /* ----------------------------------------start fullPage ------------------------------------------ */
 .fullPage{
-    display: flex;
-    grid-template-columns: repeat(1 , 1fr);
-    grid-template-rows: repeat(8,1fr);
+    display: grid;
+    grid-template-columns: repeat(1 , minmax(0,1fr));
+    grid-template-rows: repeat(8 , auto);
     grid-template-areas: 
     "activities"
+    "history"
+    "bills"
+    "general"
+    "comparison"
+    "."
+    "."
+    "."
     ;
 }
 /* -------------------------------------------- end fullPage ------------------------------------------- */
@@ -183,6 +190,7 @@ aside{
     display: flex;
     flex-direction: column;
     grid-area: activities;
+    margin-bottom: 10px;
 }
 #activities .card h3{
     font-size: 16px;
@@ -257,3 +265,263 @@ aside{
     color: #0034d1;
 }
 /* -------------------------------------------------end activities --------------------------------------- */
+#history{
+    grid-area: history;
+}
+.card .head-txt{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.card .head-txt span{
+    font-size: 12px;
+    font-weight: 500;
+}
+.card .head-txt h3{
+    font-size: 16px;
+    font-weight: 600;
+}
+#history .table-wrapper{
+    overflow-x: auto;
+}
+#history .card table{
+    font-size: 16px;
+    font-weight: 600;
+    display: block;
+    overflow-x: auto;
+    width: max-content;
+}
+#history .card table thead tr{
+    border-bottom: 4px solid #F9FAFB;
+}
+#history .card table tbody .transaction{
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    gap: 1rem;
+}
+#history .card table tbody .transaction img{
+    width: 40px;
+    border-radius: 50%;
+}
+#history .card table tbody .transaction p {
+    font-size: 0.875rem;
+}
+#history .card table tbody .transaction span {
+    font-size: 0.75rem;
+    color: #6A7282;
+
+}
+
+#history .card table tbody tr td{
+    font-size: 12px;
+    font-weight: 500;
+    text-align: center;
+    padding: .5rem .25rem;
+}
+
+#history .card table tbody tr td:nth-child(1){
+    width: 10.5rem;
+}
+#history .card table tbody tr td:nth-child(2){
+    width:6rem;
+}
+#history .card table tbody tr td:nth-child(3){
+    width:6.8rem;
+}
+#history .card table tbody tr td:nth-child(4){
+    width:5.8rem;
+}
+#history .card table tbody tr td:nth-child(5){
+    width:5.8rem;
+}
+/* -------------------------------------------------------------------start bills------------------------------------------- */
+#bills{
+    grid-area: bills;
+}
+#bills .card .total{
+    text-align: center;
+    margin-bottom: 20px;
+}
+#bills .card .total h2{
+    font-size: 1.875rem;
+    font-weight: 700;
+}
+#bills .card .total p{
+    font-size: .875rem;
+}
+
+#bills .card .billing-details{
+    display: flex;
+    flex-wrap: wrap;
+    gap: .4375rem;
+}
+
+#bills .card .billing-details .card-detail{
+    text-align: center;
+    width: calc(97% /2);
+    padding: 12px;
+    border: 1px solid #d4d5d6;
+    background-color: #F9FAFB;
+}
+#bills .card .billing-details .card-detail  p{
+    font-size: .75rem;
+}
+#bills .card .billing-details .card-detail h4 + p{
+    color: red;
+}
+/* ------------------------------------------------------------------general----------------------------------------------------- */
+#general .card .st-cards{
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+}
+#general .card .st-cards .stat{
+    width: 97%;
+    background-color: #0034d117;
+    padding: 1rem;
+    border-radius: 8px;
+    margin: auto;
+}
+#general .card .st-cards .stat .head-txt h3{
+    font-size: 1.5rem;
+}
+#general .card .st-cards .stat .head-txt div:nth-child(2) h3{
+    font-size: 1.125rem;
+}
+#general .card .st-cards .stat .head-txt p{
+    font-size: .875rem;
+}
+#general .card .st-cards .stat .percentage{
+    display: flex;
+    justify-content: space-between;
+    font-size: .75rem;
+
+}
+#general .card .st-cards .stat #progress {
+    width: 100%;
+    height: 6px;
+    background-color: #E5E7EB;
+    border-radius: 7px;
+    position: relative;
+}
+#general .card .st-cards .stat #progress::after{
+    content: "";
+    width: 82.5%;
+    position: absolute;
+    right: 0;
+    left: 0;
+    height: 100%;
+    background-color: #4575FF;
+    border-radius: 4px;
+}
+#general .card .st-cards .stat:nth-child(1) .head-txt div:nth-child(1) h3{
+    color: #1C398E;
+}
+#general .card .st-cards .stat:nth-child(1) .head-txt div:nth-child(1) p{
+    color: #0034d1;
+}
+/* --------------- */
+#general{
+    grid-area: general;
+}
+#general .card .st-cards .stat:not(:nth-child(1)){
+    background-color: #F5F6F8;
+    transition: all 0.4s;
+}
+#general .card .st-cards .stat:not(:nth-child(1)):hover{
+
+    background-color: #eaeaea;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    transition: all 0.4s;
+}
+#general .card .st-cards .stat:not(:nth-child(1)) .sec {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+#general .card .st-cards .stat:not(:nth-child(1)) .sec i {
+    font-size: 2rem;
+}
+#general .card .st-cards .stat:not(:nth-child(1)) #progress {
+    width: 100%;
+    height: 6px;
+    background-color: #E5E7EB;
+    border-radius: 7px;
+    position: relative;
+}
+#general .card .st-cards .stat:not(:nth-child(1)) #progress::after{
+    content: "";
+    width: 50%;
+    position: absolute;
+    right: 0;
+    left: 0;
+    height: 100%;
+    background-color: #F54900;
+    border-radius: 4px;
+}
+#general .card .st-cards .stat:nth-child(3) #progress::after{
+    width: 100%;
+    background-color: #E81311;
+}
+#general .card .st-cards .stat:nth-child(4) #progress::after{
+    width: 80%;
+    background-color: #F64192;
+}
+#general .card .st-cards .stat:nth-child(5) #progress::after{
+    width: 86%;
+    background-color: #18C84F;
+}
+
+/* ----------------------------------------------------- start comparison --------------------------------------------------- */
+#comparison{
+    grid-area: comparison;
+}
+#comparison .card .legend{
+    text-align: center;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    justify-content: center;
+    margin-bottom: 40px;
+}
+#comparison .card .legend .green{
+    background-color: #10B981;
+}
+#comparison .card .legend .orange{
+    background-color: #F26969;
+}
+#comparison .card .legend .green,
+#comparison .card .legend .orange{
+    width: 10px;
+    height: 10px;
+}
+
+#comparison .card .plot .chart{
+    display: flex;
+}
+#comparison .card .plot .bars{
+    width: calc(100% / 4);
+}
+#comparison .card .plot .bars span{
+    font-size: .75rem;
+}
+#comparison .card .plot .bars .bar{
+    display: flex;
+    align-items: flex-end;
+}
+#comparison .card .plot .bars .bar div{
+    width: .9375rem;
+    display: flex;
+    flex-direction: column;
+
+}
+#comparison .card .plot .bars .bar .income{
+    background-color: #10B981;
+    height: 100px;
+}
+#comparison .card .plot .bars .bar .expense{
+    background-color: #F26969;
+    height: 40px;
+}
