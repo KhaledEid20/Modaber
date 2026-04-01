@@ -201,7 +201,6 @@ aside{
 
 #activities .card .item .icon{
     font-size: 18px;
-    background-color: #155efc44;
     color: #155DFC;
     width: 30px;
     height: 30px;
@@ -235,12 +234,11 @@ aside{
 
 #activities .card .credit {
     border-color: #00C950;
-    background-color: #6ed19268;
+    background-color: #6ed19247;
     padding-bottom: 20px;
     border-bottom: 1px solid #F3F4F6;
 }
 #activities .card .credit .icon{
-    background-color: #00c95034;
     color: #00C950;
 }
 
@@ -252,6 +250,8 @@ aside{
     text-align: center;
     padding: 10px;
     color: #1447E6;
+    font-size: 14px;
+    font-weight: 400;
 }
 #activities .card .button p:hover{
     color: #0034d1;
