@@ -71,18 +71,12 @@
         grid-template-columns: repeat(3 , minmax(0,1fr));
         grid-template-rows: repeat(5 , auto);
         grid-template-areas: 
-            "topstats topstats topstats"
             "activities history history"
             "bills history history"
             "general comparison payment-cards"
             "general summary payment-cards"
         ;
     }
-    #history{
-        grid-area: history;
-    }
-    #topstats{
-    grid-area: topstats;
-    }
+
 }
 
