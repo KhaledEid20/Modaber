@@ -177,9 +177,8 @@ aside{
     "bills"
     "general"
     "comparison"
-    "."
-    "."
-    "."
+    "summary"
+    "payment-cards"
     ;
 }
 /* -------------------------------------------- end fullPage ------------------------------------------- */
@@ -525,3 +524,138 @@ aside{
     background-color: #F26969;
     height: 40px;
 }
+/* -------------------------------------------------------------------start summary ------------------------------- */
+#summary{
+    grid-area: summary;
+}
+#summary .card .expenses .src{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px;
+    border: 1px solid #d4d5d6;
+    background-color: #F9FAFB;
+    border-radius: 10px;
+}
+#summary .card .expenses .src div{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+#summary .card .expenses .src div .icon{
+    padding: 8px;
+    border-radius: 10px;
+}
+#summary .card .expenses .src:nth-child(1) div .icon{
+    background-color: #155efc3d;
+}
+#summary .card .expenses .src:nth-child(2) div .icon{
+    background-color: #00A63E3d;
+}
+#summary .card .expenses .src:nth-child(3) div .icon{
+    background-color: #9810FA3d;
+}
+#summary .card .expenses .src div .icon i{
+    font-size: 1.125rem;
+}
+#summary .card .expenses .src .txt{
+    display: block;
+}
+#summary .card .expenses .src .txt p{
+    font-size: .75rem;
+
+}
+#summary .card .expenses .src span{
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+/* -------------------------------------------------------cards Section ------------------------------------------------ */
+#payment-cards {
+    grid-area: payment-cards;
+}
+#payment-cards .container {
+    display: flex;
+    justify-content: center;
+}
+#payment-cards .card {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    align-items: center;
+}
+#payment-cards .credit {
+    width: 100%;
+    height: 200px;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 0.3s ease;
+}
+#payment-cards .credit:hover {
+    transform: rotateY(180deg);
+}
+#payment-cards .card-face {
+    padding: 16px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    inset: 0;
+    backface-visibility: hidden;
+    gap: 10px;
+}
+#payment-cards .front {
+    background: linear-gradient(135deg, #3b2db8, #4c3fd9);
+    color: white;
+}
+#payment-cards .credit:nth-child(2) .front{
+    background: linear-gradient(135deg, #880000, #560010);
+    color: white;
+}
+#payment-cards .credit:nth-child(3) .front {
+    background: linear-gradient(135deg, #050031, #0b0081);
+    color: white;
+}
+#payment-cards .back {
+    background: linear-gradient(135deg, #0b1320, #09101a);
+    color: white;
+    transform: rotateY(180deg);
+}
+#payment-cards .top,
+#payment-cards .bottom {
+    display: flex;
+    justify-content: space-between;
+}
+#payment-cards .top i {
+    font-size: 30px;
+}
+#payment-cards .card-face .number span {
+    font-size: 18px;
+}
+#payment-cards .top .chip {
+    padding: 10px 14px;
+    background-color: #ffffff2d;
+    border-radius: 10px;
+}
+#payment-cards .top .chip div {
+    width: 20px;
+    height: 16px;
+    background-color: rgba(255, 255, 255, 0.427);
+    border-radius: 5px;
+}
+#payment-cards .back .strip {
+    height: 40px;
+    width: 100%;
+    background: linear-gradient(90deg, #000 0%, #1a1a1a 40%, #3a3a3a 100%);
+}
+#payment-cards .back .signature {
+    height: 36px;
+    border-radius: 6px;
+    background: #ddd;
+    display: flex;
+    align-items: center;
+    padding: 0 10px;
+}
+/* ------------------------------------------------------------ end of the payment methods ---------------------------------- */
