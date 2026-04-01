@@ -1,0 +1,80 @@
+@media screen and (min-width: 640px) { 
+    .container{
+        max-width: 95px;
+    }
+}
+
+@media screen and (min-width: 768px) { 
+    .container{
+        max-width: 95%;
+    }
+
+}
+
+@media screen and (min-width: 1024px) { 
+
+}
+
+@media screen and (min-width: 1024px) {
+    .container {
+        max-width: 95%;
+    }
+    .logo {
+        display: flex;
+        gap: 20px;
+        align-items: center;
+    }
+    .logo .icon {
+        background-color: #2854F4;
+        width: fit-content;
+        padding: 10px;
+        border-radius: 10px;
+    }
+    .logo .icon i {
+        font-size: 20px;
+        color: white;
+    }
+    .txt h1 {
+        font-weight: 700;
+        font-size: 24px;
+    }
+    .txt p {
+        font-size: 12px;
+    }
+    
+    aside {
+        display: flex;
+        flex-direction: column;
+        position: sticky;
+        top: 0;
+        right: 0;
+        height: 100vh;
+        width: fit-content;
+        background-color: white;
+        float: right;
+        order: 2;
+    }
+    #topstats{
+        grid-area: topstats;
+    }
+    #topstats .container .stats{
+        display: flex;
+        gap: 15px;
+    }
+    #topstats .container .stats .card{
+        width: calc(100%/3);
+    }
+
+    .fullPage{
+        display: grid;
+        grid-template-columns: repeat(3 , minmax(0,1fr));
+        grid-template-rows: repeat(5 , auto);
+        grid-template-areas: 
+            "topstats topstats topstats"
+            "activities history history"
+            "bills history history"
+            "general comparison payment-cards"
+            "general summary payment-cards"
+        ;
+    }
+}

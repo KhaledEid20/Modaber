@@ -19,7 +19,7 @@ html{
     scroll-behavior: smooth;
 }
 aside{
-    display: hidden;
+    display: none;
 }
 .container{
     width: 95%;
@@ -34,6 +34,7 @@ aside{
 }
 #header{
     margin-bottom: 20px;
+    grid-area: header;
 }
 #header .head-card{
     display: flex;
@@ -134,36 +135,36 @@ aside{
 }
 
 /* --------------------------------------------general section ------------------------------------- */
-#general{
+#top-stats{
     margin-bottom: 20px;
 }
-#general .container .stats{
+#top-stats .container .stats{
     display: grid;
     grid-template-columns: repeat(1 , 1fr);
     grid-template-rows: repeat(3 , 1fr);
     gap: 20px;
 }
-#general .container .card {
+#top-stats .container .card {
     display: flex;
     flex-direction: column;
     gap: 10px;
     
 }
-#general .container .stats .card p{
+#top-stats .container .stats .card p{
     font-weight: 600;
     font-size: 12px;
     color: #6A7282;
 }
-#general .container .stats .card h2{
+#top-stats .container .stats .card h2{
     font-weight: 700;
     font-size: 30px;
 }
-#general .container .stats .card .text{
+#top-stats .container .stats .card .text{
     font-weight: 600;
     font-size: 14px;
     color: #00a63e;
 }
-#general .container .stats .expense .text{
+#top-stats .container .stats .expense .text{
     color: red;
 }
 /* ----------------------------------------start fullPage ------------------------------------------ */
@@ -172,6 +173,7 @@ aside{
     grid-template-columns: repeat(1 , minmax(0,1fr));
     grid-template-rows: repeat(8 , auto);
     grid-template-areas: 
+    "top-stats"
     "activities"
     "history"
     "bills"
@@ -657,5 +659,8 @@ aside{
     display: flex;
     align-items: center;
     padding: 0 10px;
+}
+#payment-cards .back .signature span{
+    color: #000;
 }
 /* ------------------------------------------------------------ end of the payment methods ---------------------------------- */
