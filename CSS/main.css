@@ -22,7 +22,7 @@ aside{
     display: none;
 }
 .container{
-    width: 95%;
+    width: 99%;
     margin: 10px auto;
 }
 .card{
@@ -32,6 +32,21 @@ aside{
     border-radius: 10px;
     box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
 }
+.card .head-txt{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.card .head-txt span{
+    font-size: 12px;
+    font-weight: 500;
+}
+.card .head-txt h3{
+    font-size: 16px;
+    font-weight: 600;
+}
+
 #header{
     margin-bottom: 20px;
     grid-area: header;
@@ -139,32 +154,32 @@ aside{
     margin-bottom: 20px;
     grid-area: topstats;
 }
-#topstats .container .stats{
+#topstats .stats{
     display: flex;
     flex-direction: column;
     gap: 20px;
 }
-#topstats .container .card {
+#topstats .card {
     display: flex;
     flex-direction: column;
     gap: 10px;
     
 }
-#topstats .container .stats .card p{
+#topstats .stats .card p{
     font-weight: 600;
     font-size: 12px;
     color: #6A7282;
 }
-#topstats .container .stats .card h2{
+#topstats .stats .card h2{
     font-weight: 700;
     font-size: 30px;
 }
-#topstats .container .stats .card .text{
+#topstats .stats .card .text{
     font-weight: 600;
     font-size: 14px;
     color: #00a63e;
 }
-#topstats .container .stats .expense .text{
+#topstats .stats .expense .text{
     color: red;
 }
 /* ----------------------------------------start fullPage ------------------------------------------ */
@@ -187,7 +202,6 @@ aside{
 
 /* -------------------------------------------------start activities --------------------------------------- */
 #activities{
-    width: 100%;
     display: flex;
     flex-direction: column;
     grid-area: activities;
@@ -269,21 +283,9 @@ aside{
 #history{
     grid-area: history;
     max-height: 400px;
-}
-.card .head-txt{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
     margin-bottom: 20px;
 }
-.card .head-txt span{
-    font-size: 12px;
-    font-weight: 500;
-}
-.card .head-txt h3{
-    font-size: 16px;
-    font-weight: 600;
-}
+
 #history .table-wrapper{
     overflow-x: auto;
     max-height: fit-content;
@@ -386,6 +388,10 @@ aside{
     padding: 1rem;
     border-radius: 8px;
     margin: auto;
+}
+#general .card .st-cards .stat .head-txt{
+    display: flex;
+    justify-content: space-between;
 }
 #general .card .st-cards .stat .head-txt h3{
     font-size: 1.5rem;
@@ -503,9 +509,12 @@ aside{
 
 #comparison .card .plot .chart{
     display: flex;
+    justify-content: space-around;
+    
+
 }
 #comparison .card .plot .bars{
-    width: calc(100% / 4);
+    width: fit-content;
 }
 #comparison .card .plot .bars span{
     font-size: .75rem;
@@ -578,7 +587,7 @@ aside{
 #payment-cards {
     grid-area: payment-cards;
 }
-#payment-cards .container {
+#payment-cards {
     display: flex;
     justify-content: center;
 }
@@ -595,10 +604,11 @@ aside{
     height: 200px;
     position: relative;
     transform-style: preserve-3d;
-    transition: transform 0.3s ease;
+    transition: transform 1s ease;
 }
 #payment-cards .credit:hover {
     transform: rotateY(180deg);
+    transition: transform 0.5s ease;
 }
 #payment-cards .card-face {
     padding: 16px;

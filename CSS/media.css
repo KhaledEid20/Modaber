@@ -16,8 +16,43 @@
 }
 
 @media screen and (min-width: 1024px) {
+    body{
+        display: flex;
+    }
+    main{
+        padding: 0.4rem;
+    }
+
+    aside {
+        display: flex;
+        flex-direction: column;
+        position: sticky;
+        top: 0;
+        right: 0;
+        height: 100vh;
+        width: fit-content;
+        background-color: white;
+        padding: 24px;
+        margin-right: 20px;
+    }
+    aside .logo {
+        margin-bottom: 20px;
+    }
+    aside .nav-menu .nav-item{
+        padding: 12px 0px 12px 16px;
+    }
+    
+    aside .nav-menu ul {
+        list-style: none;
+    }
+
     .container {
-        max-width: 95%;
+        max-width: 100%;
+        margin: 0;
+    }
+    .main-container{
+        width: 100%;
+        margin: 0 auto;
     }
     .logo {
         display: flex;
@@ -42,32 +77,10 @@
         font-size: 12px;
     }
     
-    aside {
-        display: flex;
-        flex-direction: column;
-        position: sticky;
-        top: 0;
-        right: 0;
-        height: 100vh;
-        width: fit-content;
-        background-color: white;
-        float: right;
-        order: 2;
-    }
-
-    #topstats .container .stats{
-        display: flex;
-        flex-direction: row;
-        gap: 15px;
-    }
-    #topstats .container .stats .card{
-        width: calc(100%/3);
-    }
-
     .fullPage{
         display: grid;
         overflow: hidden;
-        gap: 0;
+        gap: .9375rem;
         grid-template-columns: repeat(3 , minmax(0,1fr));
         grid-template-rows: repeat(5 , auto);
         grid-template-areas: 
@@ -77,6 +90,97 @@
             "general summary payment-cards"
         ;
     }
+    #header{
+        width: 100%;
+    }
+    #header .head-card{
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    #header .head-card .connected{
+        display: none;
+    }
+    #header .head-card .bar-2 {
+        gap: 15px;
+    }
+    #header .head-card .logo {
+        position: relative;
+    }
+    #header .head-card .logo::after{
+        content: "متصل";
+        position: absolute;
+        left: -50%;
+        top: 25%;
+        background-color: #14cd5e1a;
+        padding: 5px 10px;
+        color: #14cd5e;
+        border-radius: 10px;
+    }
 
+    #topstats{
+        width: 100%;
+    }
+    #topstats .stats{
+        display: flex;
+        flex-direction: row;
+        gap: 15px;
+        width: 100%;
+    }
+    #topstats .stats .card{
+        width: calc(100%/3);
+    }
+
+    #activities{
+        width: 100%;
+        margin-bottom: 0;
+    }
+    #bills{
+        width: 100%;
+    }
+
+
+    #general{
+        width: 100%;
+    }
+
+    #general .stat .head-txt{
+        margin-bottom: 0;
+    }
+
+    #history{
+        width: 100%;
+    }
+    #history .card table tbody tr td{
+        padding-block: 15px;
+    }
+
+    #comparison{
+        width: 100%;
+    }
+    #summary{
+        width: 100%;
+    }
+
+    #summary .card .expenses .src{
+        margin-bottom: 12px;
+    }
+    #summary .card .expenses .src:last-child{
+        margin-bottom: 0;
+    }
+
+    #payment-cards{
+        width: 100%;
+    }
+    #payment-cards .card{
+        display: block;
+        height: fit-content;
+    }
+    #payment-cards .credit{
+        height: 176px;
+        margin-bottom: 6px;
+    }
+    #payment-cards .credit:last-child{
+        margin-bottom: 0;
+    }
 }
 
